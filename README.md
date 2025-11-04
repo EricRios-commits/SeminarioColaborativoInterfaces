@@ -46,14 +46,44 @@ ha usado para proyectar la escena al último frame renderizado?.
 10. ¿Cómo puedes obtener la matriz de transformación entre el sistema de coordenadas
 local y el mundial?.
 11. Cómo puedes obtener la matriz para cambiar al sistema de referencia de vista
+
+
 12. Especifica la matriz de la proyección usado en un instante de la ejecución del
 ejercicio 1 de la práctica 1.
+
+[Este script](scripts/ShowProjectionMatrix.cs) nos permite obtener la cámara deseada y mostrar su matriz de proyección. 
+
+![ejercicio 12](img/ej12.png)
+
 13. Especifica la matriz de modelo y vista de la escena del ejercicio 1 de la práctica 1.
+
+Utilizamos [este script](scripts/ShowMatrices.cs) para mostrar las matrices correspondientes de la cámara.
+
+Acceso a la matriz de modelo de la cámara principal:
+
+![ejercicio 13.1](img/ej13.1.png)
+
+Acceso a la matriz de vista de la cámara principal:
+
+![ejercicio 13.2](img/ej13.2.png)
+
 14. Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz
 de cambio al sistema de referencias mundial.
+
+En [este script](scripts/ShowModelMatrix.cs) aplicamos los cambios especificados sobre un objeto y luego mostramos su matriz de cambio al sistema de referencias mundial, es decir, su matriz de modelo (localToWorldMatrix) después de la rotación.
+
+![ejercicio 14](img/ej14.png)
+
 15. ¿Como puedes calcular las coordenadas del sistema de referencia de un objeto con
 las siguientes propiedades del Transform:?:
 Position (3, 1, 1), Rotation (45, 0, 45)
+
+Para realizar el cálculo manual, deberíamos calcular las matrices de rotación parciales (una para la rotación en X, `Rx` y otra para la rotación en Z, `Rz`). A partir de ambas, obtenemos la matriz de Rotación combinada (`R = Rz * Rx`). Cada columna de esta matriz indica cómo queda orientado un eje local en el mundo.
+
+Posteriormente, deberemos incluir la posición espcificada (3, 1, 1). Podemos verificar los efectos de estos cambios en [este script](scripts/PositionComprobation.cs).
+
+![ejercicio 15](img/ej15.png)
+
 16. Crea una escena en Unity con los siguientes elementos: cámara principal, plano
 base (como suelo) y tres cubos de distinto color (rojo, verde, azul) colocados en
 posiciones distintas en el espacio. Realiza un pequeño script de depuración adjunto
