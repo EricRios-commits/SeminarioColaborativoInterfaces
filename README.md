@@ -59,11 +59,11 @@ ejercicio 1 de la práctica 1.
 
 Utilizamos [este script](scripts/ShowMatrices.cs) para mostrar las matrices correspondientes de la cámara.
 
-Acceso a la matriz de modelo de la cámara principal:
+- Acceso a la matriz de modelo de la cámara principal:
 
 ![ejercicio 13.1](img/ej13.1.png)
 
-Acceso a la matriz de vista de la cámara principal:
+- Acceso a la matriz de vista de la cámara principal:
 
 ![ejercicio 13.2](img/ej13.2.png)
 
