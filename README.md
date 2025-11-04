@@ -78,7 +78,7 @@ En [este script](scripts/ShowModelMatrix.cs) aplicamos los cambios especificados
 las siguientes propiedades del Transform:?:
 Position (3, 1, 1), Rotation (45, 0, 45)
 
-Para realizar el cálculo manual, deberíamos calcular las matrices de rotación parciales (una para la rotación en X, `Rx` y otra para la rotación en Z, `Rz`). A partir de ambas, obtenemos la matriz de Rotación combinada (`R = Rz * Rx`). Cada columna de esta matriz indica cómo queda orientado un eje local en el mundo.
+Para realizar el cálculo manual, deberíamos calcular las matrices de rotación parciales (una para la rotación en X, `Rx`, y otra para la rotación en Z, `Rz`). A partir de ambas, obtenemos la matriz de Rotación combinada (`R = Rz * Rx`). Cada columna de esta matriz indica cómo queda orientado un eje local en el mundo.
 
 Posteriormente, deberemos incluir la posición espcificada (3, 1, 1). Podríamos verificar los efectos de estos cambios con [este script](scripts/PositionComprobation.cs).
 
